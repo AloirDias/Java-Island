@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>NAV BAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="group.css">
+    <script src="group.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo"> JAVA ISLAND </h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="group.html" class="nav-links"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                <li><a href="#" class="nav-links"><i class="fa fa-globe"></i> About the Island</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page1.html" style="text-decoration:none;"> Where it is located</a></li>
+                        <li><a href="page2.html" style="text-decoration:none;">How to get there</a></li>
+                        <li><a href="page3.html" style="text-decoration:none;">Main resorts and hotels</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-links"><i class="fa fa-fw fa-search"></i> Curiosities</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page4.html" style="text-decoration:none;"> Java Island and Programming</a></li>
+                        <li><a href="page5.html" style="text-decoration:none;">Attractions and Things to do there</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-links"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page6.html" style="text-decoration:none;">Images</a></li>
+                        <li><a href="page7.html" style="text-decoration:none;">Videos</a></li>
+                    </ul>
+                </li>
+                <li><a href="Quiz.html" class="nav-links"><i class="fa fa-gamepad" aria-hidden="true"></i> Quiz</a></li>
+
+                <li><a href="#" class="nav-links nav-links-btn"><i class="fa fa-users" aria-hidden="true"></i> About
+                        Us</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page8.html" style="text-decoration:none;"> Who we are</a></li>
+                        <li><a href="page9.html" style="text-decoration:none;">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="Images/homepic.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Images/HomePic4.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Images/kar.jpg" style="width:100%">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="homequote">
+        <blockquote>
+            “How I wish that somewhere there existed an island for those who are wise and of good will.” <br>
+            – Albert Einstein
+        </blockquote>
+    </div>
+    <div class="newspaper">
+        <h2>Colours of Java: Events and Festivals</h2> <br>
+        A professional experienced guide will be waiting to greet you at the arrival gates. They will be holding a sign
+        with your name on it for ease of contact. Sit back, relax, and enjoy the sights as your driver negotiates the
+        journey from Semarang to Borobudur.
+        <br>
+        <img id="centerImage" style="text-align: center" src="Images/tour.jpg" width="300px" alt="The Jakarta Post"><br>
+        <br>
+        Have a typical local lunch before the return journey to the port.
+    </div>
+    <br>
+    <div class="newspaper">
+        <h3>
+            Semarang & Yogyakarta: One Way Private Transfer
+        </h3>
+        <br>
+        <img id="centerImage" style="text-align: center" src="Images/transfer.jpg" width="300px"
+            alt="The Jakarta Post"><br>
+        <br>
+        Sit back, relax, and enjoy the sights on a three and a half hour journey as your driver negotiates the traffic.
+        Take the chance to stop for pictures or coffee on your private transfer. This service is limited to three guests
+        per group.
+
+        For pick up from the airport, your professional driver will be waiting to greet you at the arrival gates. They
+        will be holding a sign with your name for ease of contact.
+        <br>
+    </div>
+    <div class="newspaper">
+   <h2>Weather Forecast </h2>
+        <br>
+        The average highest temperature in Java in April is 32.1 ℃ (89.78 ℉). The average lowest temperature is 25.9 ℃
+        (78.62 ℉). At the beginning of April you can expect lower temperatures, the average highest temperature is
+        around 31.55 ℃ (88.79 ℉). 
+        <br>
+        <img id="centerImage" style="text-align: center" src="Images/weather.jpg" width="300px"
+            alt="The Jakarta Post"><br>
+        <br>
+    </div>
+    <div class="newspaper">
+        <h3>
+           Jakarta Post: Indonesia Could Reopen Bali Beaches to Foreigners by End of July
+        </h3>
+        <br>
+Indonesia aims to welcome back foreign tourists to the resort islands of Bali, Bintan and Batam by the end of July, with a plan to speed up vaccinations in those areas to halt the spread of the novel coronavirus. The government is in talks with Singapore, China, South Korea, India, the Netherlands and United Arab Emirates for potential travel bubbles that will allow their nationals to visit Indonesia’s so-called “green zones,” or sites that have curbed Covid-19 infections and vaccinated a significant portion of their local population, Tourism and Creative Economy Minister Sandiaga Uno said in an interview on Friday.
+        <br>
+    </div>
+    <div class="btnRight">
+        
+        <img src="Images/play2.png" id="icon">
+        <p>Click Here to Listen</p>
+    </div>
+    <audio id="myAudio" >
+    <source src="SomewhereOverTheRainbow.mp3" type="audio/mp3">
+</audio>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <footer>
+            <div class="flex-container">
+                <div class="createdby">
+                    © 2021 · made by <a href="Aloir Dias">Aloir Dias</a>, <a href="Bruna Mattos">Bruna Mattos</a> and <a href="Thais Sardinha">Thais Sardinha</a>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

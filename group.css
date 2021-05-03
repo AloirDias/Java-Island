@@ -1,0 +1,458 @@
+:root { /*creating variables to store the colours */
+    --darkgray: #e5ddcd;
+    --brightturquoise: #08E8DE;
+    --white: #fff;
+    --turquoise: #30D5C8;
+}
+* { /* applying style to the whole HTML*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.nav-container { /* a DIV including everything that is in the NAV */
+    width: 100%;
+    background-color: var(--darkgray);
+    font-size: 20px;
+}
+.navbar { /* a class for the NAV */
+    display: flex; /* much responsive and mobile fridnly */
+    align-items: center;
+    height: 80px;
+    width: 90%; /* the space the navbar can take up on the screen */
+    max-width: 1920px; /* considering the biggest screen */
+    margin: 0 auto; /* is shorthand for setting the top and bottom margins to zero, and the left and right margins to auto, as long as there is a width specified */
+}
+#navbar-logo { /* ID to customize the name "JAVA" on the nav bar */
+    color: white;
+    margin-left: 20px;
+}
+.nav-menu { /* the class the wrappes all the options on the nav bar */
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: space-around;
+}
+.nav-links { /* class that includes all the links on the nav bar */
+    color: white;
+    text-decoration: none;
+}
+.nav-links:hover {
+    color: #08E8DE;
+}
+.nav-links-btn:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+/* settings for the 3 dashes */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+}
+.dropdown { /* so that the dropdown with submenu is not covered by anything else */
+    z-index: 5000; 
+    margin-top: 9px;
+    padding: 15px;
+}
+@media screen and (max-width: 760px) {
+    .nav-container {
+        position: relative;
+    }
+    .nav-menu {
+        display: grid; /* to set it to be in columns */
+        background: var(--brightturquoise); /* change the colour very quicly when releasing the hamburguer */
+        width: 100%;
+        position: absolute;
+        top: 370px; /* leaving some spacing between the menu and the blockquote */
+        opacity: 0; /* setting the menu to be transparent until click on the hamgurguer */
+        float: none;
+    }
+    #navbar-logo {
+        margin-left: 25px;
+        font-size: 18px;
+    }
+    .homequote, blockquote {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .nav-menu.active {
+        background: var(--darkgray);
+        opacity: 1; /* setting the menu to be displayed when "active" */
+        transition: all 0.5s ease;
+    }
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table; 
+    }
+    .nav-links:hover {
+        background-color: #08E8DE;
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+    .navbar {
+        width: 100%;
+        height: 50px;
+    }
+    .nav-menu {
+        width: 60%;
+        margin-left: 20%;
+    }
+    .nav-links-btn {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--darkgray);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+    .nav-links-btn:hover {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: #08E8DE;
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+    /* placing the hamburguer on the right hand side of the screen */
+    #mobile-menu {
+        position: absolute;
+        top: -12%;
+        right: 5%;
+        transform: translate(5%, 70%);
+    }
+    /* displaying the menu hamburguer and setting the pointer */
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-toggle .bar {
+        cursor: pointer;
+    }
+    /* making the hamburguer change from 3 dashes to an x */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0; /* making the second dash transparent */
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* rotating the first dash */
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /*rotating the third dash so that they will form an "X" */
+    }
+    ul li:hover > ul, /*making the submenu visibile when hover */
+    ul li:focus-within > ul,
+    ul li ul:hover,
+    ul li ul:focus {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        position: relative;
+    }
+    .dropdown { /* creating some room around each submenu and the border */
+        padding: 15px;
+    }
+    .flex-container, .flex-main, .createdby {
+        font-size: 18px;
+    }
+}
+li {
+    display: block;
+    padding: 1rem;
+    position: relative;
+    transition-duration: 0.5s;
+}
+li a {
+    color: #fff;
+}
+li:hover,
+li:focus-within {
+    background: #30D5C8;
+    cursor: pointer;
+}
+li:focus-within a {
+    outline: none;
+}
+ul li ul { /*hiding the sub menu */
+    background: #e5ddcd;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+}
+ul li:hover > ul, /*making the submenu visibile when hover */
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+.homequote {
+    text-align: center;
+    font-size: 30px;
+    color: #c2b18b;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+}
+* {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: var(--darkgray);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #c2b18b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #a67e51;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.flex-container {/* */
+    color: white;/* */
+    display: flex;/* */
+    background-color: #e5ddcd;;/* setting the background colour */
+    margin-top: 90px;
+    font-size: 24px;/* */
+    padding:15px;/* */
+    justify-content: space-around;/* creating an enven space around them */
+}
+.flex-container a {/* */
+    text-decoration: none;/*getting rid of the underline */
+    color: white;/* setting the text colour to be white*/
+    font-size: 24px; /* */
+    border: none;
+    padding: 0;
+    display: inline;
+	position: relative;
+    bottom:0;
+    padding-bottom: 0;
+    width:100%;
+}
+.flex-container a:hover {/* when hovered*/
+    background-color: #08E8DE;
+}
+.mainPic {
+    width: 100%;
+}
+/*
+/*Contact Us (Aloir)*/
+#aloir{
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+form ul li label{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+form ul li input, select, span {
+float: left;
+margin-bottom: 10px;
+}
+form textarea {
+float: left;
+width: 350px;
+height: 150px;
+}
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:18px
+}
+} 
+/* Contact Us (Aloir) */
+
+.newspaper {
+    margin-top: 100px;
+    margin-left: 320px;
+    margin-right: 320px;
+    column-count: 2;
+    column-gap: 90px;
+    column-rule: 1px solid #08E8DE;
+    font-size: 20px;
+    text-align: justify;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+  .newspaper #centerImage {
+      margin-left: 30px;
+  }
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 70px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #e5ddcd;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #myBtn:hover {
+    background-color: #08E8DE;
+  }
+/*PAGE1 20.04.2021 */
+#imagesID {
+margin-bottom: -40px;
+    margin-top: 90px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+  }
+  table {
+    border-spacing: 10px;
+    margin-left: 110px;
+    width: 55%;
+    padding-top: 5px;
+  }
+.column {
+  float: left;
+  width: 70%;
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-top: 110px;
+  line-height: 2;
+  text-align: justify;
+  font-size: 20px;
+  float: left;
+}
+.column1 {
+    float:right;
+    width:25%;
+    padding:10px;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
+    margin-right: 20px;
+    padding-right: 90px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#imageDiv {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#tableID {
+    margin-bottom: 80px;
+}
+#clickHere  {
+    text-decoration: none;
+    font-style: italic;
+    padding-left: 110px;
+    font-size: 20px;
+}
+
+/* Play button */
+.btnRight {
+    font-size: 18px;
+    color: #e5ddcd;
+    font-weight: bold;
+    position: fixed; /* Fixed/sticky position */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    padding: 10px; /* Some padding */
+    font-size: 18px; /* Increase font size */ 
+    bottom: 30px;
+    padding-top: 300px;
+}
+#icon {
+    width: 80;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 5px;
+}

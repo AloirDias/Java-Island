@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz</title>
+        <script src="Quiz.js" defer></script>
+        <link rel="stylesheet" href="Quiz.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PAGE 4 </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="group.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo"> JAVA ISLAND </h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="group.html" class="nav-links"><i class="fa fa-fw fa-home"></i>  Home</a></li>
+                <li><a href="#" class="nav-links"><i class="fa fa-globe"></i>  About the Island</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page1.html" style="text-decoration:none;" > Where it is located</a></li>
+                        <li><a href="page2.html" style="text-decoration:none;" >How to get there</a></li>
+                        <li><a href="page3.html" style="text-decoration:none;" >Main resorts and hotels</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-links"><i class="fa fa-fw fa-search"></i>  Curiosities</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page4.html" style="text-decoration:none;" > Java Island and Programming</a></li>
+                        <li><a href="page5.html" style="text-decoration:none;" >Attractions and Things to do there</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-links"><i class="fa fa-picture-o" aria-hidden="true"></i>  Galery</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page6.html" style="text-decoration:none;" >Images</a></li>
+                        <li><a href="page7.html" style="text-decoration:none;" >Videos</a></li>
+                    </ul> 
+                </li>
+                <li><a href="Quiz.html" class="nav-links"><i class="fa fa-gamepad" aria-hidden="true"></i>  Quiz</a></li>
+                <li><a href="#" class="nav-links nav-links-btn"><i class="fa fa-users" aria-hidden="true"></i>  About Us</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="page8.html" style="text-decoration:none;" > Who we are</a></li>
+                        <li><a href="page9.html" style="text-decoration:none;" >Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> 
+        <img class="homepic" src="Images/paradise.jpg" alt="alt"/>
+    </div>
+        <div id="leftSide">
+            <div id="introduction">
+                <p>
+                    Some text
+                </p>
+                <form>
+                    <input type="text" id="name" name="name"><br><br>
+                    <input type="button" id="button" value="Submit Name and Star Quiz" onclick="play()"/>
+                </form>
+            </div>
+        </div>
+        <div id="rightSide">
+            <div id="q0">
+                <h3>1. Who developed Java?</h3>
+                <form>
+                    <label class="container">   Richard Stallman    <input type="radio" name="options0" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   Steve Jobs          <input type="radio" name="options0" id="b" value="b">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   James Gosling       <input type="radio" name="options0" id="c" value="c">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   Tim Berners-Lee     <input type="radio" name="options0" id="d" value="d">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(0)"/>
+                </form>
+            </div>
+            <div id="q1">
+                <h3>2. When was Java first released?</h3>
+                <form>
+                    <label class="container">   1995    <input type="radio" name="options1" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   1996    <input type="radio" name="options1" id="b" value="b">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   1997    <input type="radio" name="options1" id="c" value="c">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   1998    <input type="radio" name="options1" id="d" value="d">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(1)"/>
+                </form>
+            </div>
+            <div id="q2">
+                <h3>3. What was the original name for Java?</h3>
+                <form>
+                    <label class="container">   Maple   <input type="radio" name="options2" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   Birch   <input type="radio" name="options2" id="b" value="b">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   Oat     <input type="radio" name="options2" id="c" value="c">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   Oak     <input type="radio" name="options2" id="d" value="d">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(2)"/>
+                </form>
+            </div>
+            <div id="q3">
+                <h3>4. Which of the options below is the well known - Java Mascot?</h3>
+                <form>
+                    <label class="container">   Keith       <input type="radio" name="options3" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   The Duke    <input type="radio" name="options3" id="b" value="b">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   Crab        <input type="radio" name="options3" id="c" value="c">                   <span class="checkmark"></span></label><br>
+                    <label class="container">   Gopher      <input type="radio" name="options3" id="d" value="d">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(3)"/>
+                </form>
+            </div>
+            <div id="q4">
+                <h3>5. Where is Java Island located?</h3>
+                <form>
+                    <label class="container">  Thailand     <input type="radio" name="options4" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">  Malaysia     <input type="radio" name="options4" id="b" value="b">                   <span class="checkmark"></span></label><br>
+                    <label class="container">  Indonesia    <input type="radio" name="options4" id="c" value="c">                   <span class="checkmark"></span></label><br>
+                    <label class="container">  Philippines  <input type="radio" name="options4" id="d" value="d">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(4)"/>
+                </form>
+            </div>
+            <div id="q5">
+                <h3>6. The "10 Cheapest countries to visit" list includes Indonesia.</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options5" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options5" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(5)"/>
+                </form>
+            </div>
+            <div id="q6">
+                <h3>7. Java was made by an accident.</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options6" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options6" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(6)"/>
+                </form>
+            </div>
+            <div id="q7">
+                <h3>8. Indonesia is made up of more than 17.500 islands.</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options7" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options7" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(7)"/>
+                </form>
+            </div>
+            <div id="q8">
+                <h3>9. Death sentence was resumed in Indonesia 10 years ago.?</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options8" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options8" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(8)"/>
+                </form>
+            </div>
+            <div id="q9">
+                <h3>10. Indonesia's flag consists of two horizontal stripes: red over white stars.</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options9" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options9" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(9)"/>
+                </form>
+            </div>
+            <div id="q10">
+                <h3>11. Indonesia has volcanoes, some of which you can climb on.</h3>
+                <form>
+                    <label class="container">   True    <input type="radio" name="options10" id="a" value="a" checked="checked"> <span class="checkmark"></span></label><br>
+                    <label class="container">   False   <input type="radio" name="options10" id="b" value="b">                   <span class="checkmark"></span></label><br>
+
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(10)"/>
+                </form>
+            </div>
+            <div id="q11">
+                <h3>12. What is the capital of Indonesia?.</h3>
+                <form>
+                    <input type="text" id="myText11" value="">
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(11)"/>
+                </form>
+            </div>
+            <div id="q12">
+                <h3>13. Java was developed over 23 years ago by Sun Microsystems and has since been acquired by another company. Which company bought Java?</h3>
+                <form>
+                    <input type="text" id="myText12" value="">
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(12)"/>
+                </form>
+            </div>
+            <div id="q13">
+                <h3>14. What is the climate like on Java Island (Temperate / Tropical / Dry / Continental)?</h3>
+                <form>
+                    <input type="text" id="myText13" value="">
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(13)"/>
+                </form>
+            </div>
+            <div id="q14">
+                <h3>15. From 1 to 5, which position of coffee producing countries is Indonesia in (1 - 5)?</h3>
+                <form>
+                    <input type="text" id="myText14" value="">
+                    <input type="button" id="button2" value="Submit Answer" onclick="checkAnswer(14)"/>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <section class="flex-main" >
+                <div class="flex-container">
+                    <div class="createdby" >
+                        © 2021 · made by Aloir Dias, Bruna Mattos and Thais Sardinha
+                    </div>
+                </div>  
+            </section>
+        </footer>
+        <script src="group.js"></script>
+    </body>
+</html>
+<!-- 
+    explanation about defer in the statement <script src="quiz.js" defer></script>
+    time: 1:35
+    @link: https://www.linkedin.com/learning/javascript-essential-training/modern-javascript-loading
+-->
