@@ -36,36 +36,7 @@ function play() {
         document.body.style.backgroundImage="url('images/java-karung.jpg')";
         var name = document.getElementById("name").value;
         leftSide.innerHTML = "<div id='leftSide'> <h3> Congratulations " + name + " you did " + (points/5)*100 + "%</h3> </div>";
-        rightSide.innerHTML += "<input type='button' id='previous' value='previous' onclick='previous(pos)'/>";
-        rightSide.innerHTML += "<input type='button' id='next' value='next' onclick='next(pos)'/>";
-    }
-}
-
-function previous(pos) {
-    if (pos == q[4]){
-        displayQuestion(q[3]);
-    } else if (pos == q[3]){
-        displayQuestion(q[2]);
-    } else if (pos == q[2]){
-        displayQuestion(q[1]);
-    } else if (pos == q[1]){
-        displayQuestion(q[0]);
-    } else {
-        displayQuestion(q[4]);
-    }
-}
-
-function next(pos) {
-    if (pos == q[0]){
-        displayQuestion(q[1]);
-    } else if (pos == q[1]){
-        displayQuestion(q[2]);
-    } else if (pos == q[2]){
-        displayQuestion(q[3]);
-    } else if (pos == q[3]){
-        displayQuestion(q[4]);
-    } else {
-        displayQuestion(q[0]);
+        
     }
 }
 
