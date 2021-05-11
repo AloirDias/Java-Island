@@ -16,7 +16,7 @@
     font-size: 20px;
 }
 .navbar { /* a class for the NAV */
-    display: flex; /* much responsive and mobile fridnly */
+    display: flex; /* much responsive and mobile friendly */
     align-items: center;
     height: 80px;
     width: 90%; /* the space the navbar can take up on the screen */
@@ -57,25 +57,27 @@
     margin-top: 9px;
     padding: 15px;
 }
-@media screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
+    /* mobile */
     .nav-container {
         position: relative;
+        width: 100%;
     }
     .nav-menu {
         display: grid; /* to set it to be in columns */
         background: var(--brightturquoise); /* change the colour very quicly when releasing the hamburguer */
         width: 100%;
         position: absolute;
-        top: 370px; /* leaving some spacing between the menu and the blockquote */
+        top: 350px; /* leaving some spacing between the menu and the blockquote */
         opacity: 0; /* setting the menu to be transparent until click on the hamgurguer */
         float: none;
     }
     #navbar-logo {
         margin-left: 25px;
-        font-size: 18px;
+        font-size: 22px;
     }
     .homequote, blockquote {
-        font-size: 18px;
+        font-size: 15px;
         padding: 5px;
     }
     .nav-menu.active {
@@ -155,9 +157,40 @@
     .dropdown { /* creating some room around each submenu and the border */
         padding: 15px;
     }
-    .flex-container, .flex-main, .createdby {
+    .flex-container {
         font-size: 18px;
     }
+    /*
+    .newspaper {
+        width: 70%;
+        display: flex;
+        font-size: 15px;
+        margin: 30px;
+        margin-right: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        }
+        h2, h3 {
+        font-size: 20px;
+        display: inline;
+        text-align: center;
+        }
+        #centerImage {
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        }
+        .flex-container {
+            margin-bottom: 0;
+            height: 40px;
+        }
+        .flex-container a {
+            font-size: 15px;
+        }
+        #myAudio {
+            margin-bottom: 30px;
+        }*/
 }
 li {
     display: block;
@@ -198,10 +231,11 @@ ul li ul:focus {
     text-align: center;
     font-size: 30px;
     color: #c2b18b;
-    margin-top: 20px;
+    margin-top: 30px;
     font-style: italic;
     font-weight: bold;
     position: relative;
+    margin-bottom: 80px;
 }
 * {box-sizing:border-box}
 /* Slideshow container */
@@ -289,9 +323,9 @@ ul li ul:focus {
     color: white;/* */
     display: flex;/* */
     background-color: #e5ddcd;;/* setting the background colour */
-    margin-top: 90px;
+    margin-top: 30px;
     font-size: 24px;/* */
-    padding:15px;/* */
+    padding:10px;/* */
     justify-content: space-around;/* creating an enven space around them */
 }
 .flex-container a {/* */
@@ -312,6 +346,295 @@ ul li ul:focus {
 .mainPic {
     width: 100%;
 }
+
+.newspaper {
+    margin-top: 100px;
+    margin-left: 320px;
+    margin-right: 320px;
+    column-count: 2;
+    column-gap: 90px;
+    column-rule: 1px solid #08E8DE;
+    font-size: 20px;
+    text-align: justify;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+  .newspaper #centerImage {
+      margin-left: 30px;
+  }
+  h2, h3 {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 1px;
+      text-align: center;
+      font-size: 30px;
+  }
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 70px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #e5ddcd;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 13px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+  }
+  #myBtn:hover {
+    background-color: #08E8DE;
+  }
+/*PAGE1 20.04.2021 */
+#imagesID {
+margin-bottom: -40px;
+    margin-top: 90px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+  }
+  table {
+    border-spacing: 10px;
+    margin-left: 110px;
+    width: 55%;
+    padding-top: 5px;
+  }
+.column {
+  float: left;
+  width: 70%;
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-top: 110px;
+  line-height: 2;
+  text-align: justify;
+  font-size: 20px;
+  float: left;
+}
+.column1 {
+    float:right;
+    width:25%;
+    padding:10px;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
+    margin-right: 20px;
+    padding-right: 90px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#imageDiv {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#tableID {
+    margin-bottom: 80px;
+}
+#clickHere  {
+    text-decoration: none;
+    font-style: italic;
+    padding-left: 110px;
+    font-size: 20px;
+}
+/* Play button */
+.btnRight {
+    color: #e5ddcd;
+    font-weight: bold;
+    position: fixed; /* Fixed/sticky position */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    padding: 10px; /* Some padding */
+    font-size: 13px; /* Increase font size */ 
+    bottom: 50px;
+}
+#icon {
+    width: 80;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.textImage {
+    display: flex;
+}
+.textImage .iT{
+float: left;
+padding: 10px;
+}
+.textImage .tI {
+    float: right;
+    padding: 10px;
+    padding-left: 22px;
+}
+/* Media Queries for mobile screen => Thais 03.01 */
+
+@media only screen and (max-width:600px) {
+h2, h3 {
+font-size: 20px;
+display: inline;
+text-align: center;
+padding: 20%;
+width: 70%;
+margin: 10px;
+margin-bottom: 30px;
+padding-bottom: 30px;
+}
+#centerImage {
+display: inline-block;
+float: none;
+}
+.flex-container {
+    margin-bottom: 0;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+}
+.flex-container a {
+    font-size: 15px;
+}
+#myAudio {
+    margin-bottom: 30px;
+}
+.homequote, blockquote {
+    font-size: 15px;
+    padding: 5px;
+    padding-bottom: 40px;
+    margin-bottom: -10px;
+}
+.newspaper {
+    width: 70%;
+    column-count: 1;
+    text-align: justify;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 30px;
+  }
+  #myBtn {
+    padding: 10px; /* Some padding */
+   font-size: 10px; /* Increase font size */
+    bottom: 80px;
+  }
+  .btnRight p {
+      display:none;
+  }
+  .btnRight {
+      bottom: 70px;
+      margin-left: -70px;
+  }
+  .column1 {
+      display: none;
+  }
+  .column {
+    width: 100%;
+    column-count: 1;
+    text-align: justify;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 30px; 
+  }
+#imageDiv {
+      width: 100%;
+  }
+
+}
+
+ /*nova versao */
+@media only screen and (max-width:768px) {
+    h1 {
+        font-size: 23px;
+    }
+h2, h3 {
+    font-size: 20px;
+    display: inline;
+    text-align: center;
+    padding: 20%;
+    width: 70%;
+    margin: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    }
+  #centerImage {
+      display: none;
+  }
+    .flex-container {
+        margin-bottom: 0;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+    }
+    .flex-container a {
+        font-size: 15px;
+    }
+    #myAudio {
+        margin-bottom: 30px;
+    }
+    .homequote, blockquote {
+        font-size: 15px;
+        padding: 5px;
+        padding-bottom: 40px;
+        margin-bottom: -10px;
+    }
+    .newspaper {
+        width: 80%;
+        column-count: 1;
+        text-align: justify;
+        margin: auto;
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 30px;
+      }
+      #myBtn {
+        padding: 10px; /* Some padding */
+        font-size: 10px; /* Increase font size */
+        bottom: 80px;
+      }
+      .btnRight p {
+          display:none;
+      }
+      .btnRight {
+          bottom: 70px;
+          margin-left: -70px;
+      }
+      .column1 {
+          display: none;
+      }
+      .column  , .threecolumn{
+        width: 100%;
+        column-count: 1;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 30px; 
+      }
+    #imageDiv {
+          width: 100%;
+      } 
+      .threecolumn {
+          width: 100%;
+          column-count: 1;
+      }
+  
+    }
+    .threecolumn {
+        column-count: 3;
+        column-gap: 150px;
+        margin: 150px;
+        font-size: 20px;
+    margin-top: 100px;
+    text-align: justify;
+    margin-bottom: 10px;
+    }
+
 /*Aloir CSS
 Contact Us (Aloir)
 */
@@ -457,115 +780,3 @@ Quiz (ALoir)
 }
 
 /* Quiz (Aloir) */
-
-.newspaper {
-    margin-top: 100px;
-    margin-left: 320px;
-    margin-right: 320px;
-    column-count: 2;
-    column-gap: 90px;
-    column-rule: 1px solid #08E8DE;
-    font-size: 20px;
-    text-align: justify;
-    height: 300px;
-    margin-bottom: 10px;
-  }
-  .newspaper #centerImage {
-      margin-left: 30px;
-  }
-  #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 70px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #e5ddcd;
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  #myBtn:hover {
-    background-color: #08E8DE;
-  }
-/*PAGE1 20.04.2021 */
-#imagesID {
-margin-bottom: -40px;
-    margin-top: 90px;
-}
-table, th, td {
-    border: 1px solid black;
-    padding: 3px;
-  }
-  table {
-    border-spacing: 10px;
-    margin-left: 110px;
-    width: 55%;
-    padding-top: 5px;
-  }
-.column {
-  float: left;
-  width: 70%;
-  padding-left: 110px;
-  padding-right: 110px;
-  padding-top: 110px;
-  line-height: 2;
-  text-align: justify;
-  font-size: 20px;
-  float: left;
-}
-.column1 {
-    float:right;
-    width:25%;
-    padding:10px;
-    margin-top: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: justify;
-    margin-right: 20px;
-    padding-right: 90px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#imageDiv {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-#tableID {
-    margin-bottom: 80px;
-}
-#clickHere  {
-    text-decoration: none;
-    font-style: italic;
-    padding-left: 110px;
-    font-size: 20px;
-}
-
-/* Play button */
-.btnRight {
-    font-size: 18px;
-    color: #e5ddcd;
-    font-weight: bold;
-    position: fixed; /* Fixed/sticky position */
-    left: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    padding: 10px; /* Some padding */
-    font-size: 18px; /* Increase font size */ 
-    bottom: 30px;
-    padding-top: 300px;
-}
-#icon {
-    width: 80;
-    cursor: pointer;
-    margin-left: 50px;
-    margin-top: 5px;
-}
